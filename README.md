@@ -1,4 +1,19 @@
-# RFC-Bibtex
+# Deprecation Warning
+
+<span style="color:red; font-size:4em;">This version of the project has been deprecated.</span> <br/>
+<span style="color:green; font-size:4em;">Please use <a href="https://github.com/iluxonchik/rfc-bibtex/">rfc-bibtex</a> instead.</span>
+
+The package has **changed name on PyPi** from `rfc-bibtex` to `rfcbibtex`.
+
+You can install the new version with:
+
+`pip install rfcbibtex`
+
+or
+
+`pipenv install rfcbibtex`
+
+# RFCBibTex
 
 A command line tool that creates `BibTex` entries for IETF `RFC`s and `Internet Drafts`.
 It can read the list of `RFC`s and `Internet Drafts` to parse from various sources:
@@ -19,6 +34,8 @@ You can use `pip` to install this command-line tool:
 or `pipenv`:
 
     pipenv install rfcbibtex
+
+<span style="color:red;">Please note, that <span style="color:green">rfcbibtex</span> is the new package name on PyPi. The deprecated version used <span style="color:green">rfc-bibtex</span>.</span>
 
 Alternatively, you can clone this repository or download the `rfc-bibtex.py`. This tool has no
 external dependencies, so as long as you have `Python 3.x` installed, everything
@@ -49,27 +66,28 @@ from the project root.
 
 This tool automates the requests to the `https://datatracker.ietf.org/doc/<id>/<version>/bibtex/` and `https://datatracker.ietf.org/doc/<id>/bibtex/` endpoints.
 
-  usage: rfcbibtex [-h] [-f FILE_NAME] [-o FILE_NAME]
-                  [inline_args [inline_args ...]]
+```
+usage: rfcbibtex [-h] [-f FILE_NAME] [-o FILE_NAME]
+                [inline_args [inline_args ...]]
 
-  Generate BibTex entries for IETF RFCs and Internet Drafts. The list of IDs can
-  be read from a file (including .tex and .aux) or directly from command-line
-  arguments.
+Generate BibTex entries for IETF RFCs and Internet Drafts. The list of IDs can
+be read from a file (including .tex and .aux) or directly from command-line
+arguments.
 
-  positional arguments:
-    inline_args           list of RFC and/or Internet Draft IDs, in any order.
+positional arguments:
+inline_args           list of RFC and/or Internet Draft IDs, in any order.
 
-  optional arguments:
-    -h, --help            show this help message and exit
-    -f FILE_NAME, --file FILE_NAME
-                          read list of RFC and/or Internet Draft IDs from a
-                          file. Supported file formats are the following: .tex,
-                          .aux and .txt (one ID per line). If a file with any
-                          other extension is provided, the tool attempts to read
-                          it as a .txt file, containing one ID per line.
-    -o FILE_NAME, --output FILE_NAME
-                          output the resulting BibTex to a file
-
+optional arguments:
+-h, --help            show this help message and exit
+-f FILE_NAME, --file FILE_NAME
+                        read list of RFC and/or Internet Draft IDs from a
+                        file. Supported file formats are the following: .tex,
+                        .aux and .txt (one ID per line). If a file with any
+                        other extension is provided, the tool attempts to read
+                        it as a .txt file, containing one ID per line.
+-o FILE_NAME, --output FILE_NAME
+                        output the resulting BibTex to a file
+```
 
 ## Identifier Format
 
